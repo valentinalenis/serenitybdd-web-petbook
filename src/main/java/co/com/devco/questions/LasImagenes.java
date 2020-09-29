@@ -21,10 +21,13 @@ public class LasImagenes implements Question<Boolean> {
     public Boolean answeredBy(Actor actor) {
         if(resultado == "perro"){
             String resultadoEncontrado = Attribute.of(FIRST_IMAGE).named("src").viewedBy(actor).asString();
-            return resultadoEncontrado.contains(resultado);
+            String resultadoEncontrado2 = Attribute.of(SECOND_IMAGE).named("src").viewedBy(actor).asString();
+            String resultadoEncontrado3 = Attribute.of(THIRD_IMAGE).named("src").viewedBy(actor).asString();
+            return resultadoEncontrado.contains(resultado) && resultadoEncontrado2.contains(resultado) && resultadoEncontrado3.contains(resultado);
         }else if(resultado == "gato"){
             String resultadoEncontrado = Attribute.of(FIRST_IMAGE).named("src").viewedBy(actor).asString();
-            return resultadoEncontrado.contains(resultado);
+            String resultadoEncontrado2 = Attribute.of(SECOND_IMAGE).named("src").viewedBy(actor).asString();
+            return resultadoEncontrado.contains(resultado) && resultadoEncontrado2.contains(resultado);
         }else{
             String resultadoEncontrado1 = Attribute.of(FIRST_IMAGE).named("src").viewedBy(actor).asString();
             String resultadoEncontrado2 = Attribute.of(THIRD_IMAGE).named("src").viewedBy(actor).asString();

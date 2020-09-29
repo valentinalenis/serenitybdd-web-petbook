@@ -4,7 +4,7 @@ Característica: Ver solo perros
   Quiero ver todas las imagenes de perros
   Para poder abrir la que mas me guste
 
-  Escenario: Ver todas los perros
+  Escenario: Ver todos los perros
     Dado que Juan ingresa al petBook
     Cuando quiera ver todos los perros
     Entonces debe encontrar solo imagenes de perros
